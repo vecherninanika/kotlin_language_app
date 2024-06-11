@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.example.reply.data
+package com.suonica.language_app.data
 
-import com.example.reply.R
+import com.suonica.language_app.R
 
 /**
  * A static data store of [Email]s.

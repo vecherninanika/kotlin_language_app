@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui
+package com.suonica.language_app.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -35,7 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.reply.R
+import com.suonica.language_app.R
 
 @Composable
 fun ReplyApp(

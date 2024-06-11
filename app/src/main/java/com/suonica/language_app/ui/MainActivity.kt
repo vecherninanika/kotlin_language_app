@@ -14,22 +14,23 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui
+package com.suonica.language_app.ui
 
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.reply.data.LocalEmailsDataProvider
-import com.example.reply.ui.theme.AppTheme
+import com.suonica.language_app.data.LocalEmailsDataProvider
+import com.suonica.language_app.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -52,6 +53,12 @@ class MainActivity : ComponentActivity() {
                             viewModel.setSelectedEmail(emailId)
                         }
                     )
+//                    Button(
+//                        onClick = {
+//                        throw RuntimeException("Test Crash")
+//                    }) {
+//                        Text(text = "Crashlytics Test")
+//                    }
                 }
             }
         }
@@ -77,12 +84,4 @@ fun ReplyAppPreview() {
     }
 }
 
-val crashButton = Button(this)
-crashButton.text = "Test Crash"
-crashButton.setOnClickListener {
-    throw RuntimeException("Test Crash") // Force a crash
-}
 
-addContentView(crashButton, ViewGroup.LayoutParams(
-ViewGroup.LayoutParams.MATCH_PARENT,
-ViewGroup.LayoutParams.WRAP_CONTENT))

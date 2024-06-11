@@ -8,4 +8,5 @@ plugins {
 
     // Add the dependency for the Crashlytics Gradle plugin
     id("com.google.firebase.crashlytics") version "3.0.1" apply false
+
 }

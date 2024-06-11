@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui
+package com.suonica.language_app.ui
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.reply.data.Email
-import com.example.reply.data.LocalEmailsDataProvider
+import com.suonica.language_app.data.Email
+import com.suonica.language_app.data.LocalEmailsDataProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.launch
 
 class ReplyHomeViewModel : ViewModel() {
 

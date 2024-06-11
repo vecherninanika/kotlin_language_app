@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui.theme
+package com.suonica.language_app.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -30,7 +30,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.example.compose.*
+import com.suonica.compose.*
 
 // Material 3 color schemes
 private val LightColors = lightColorScheme(

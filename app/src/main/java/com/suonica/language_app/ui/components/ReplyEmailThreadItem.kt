@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui.components
+package com.suonica.language_app.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -25,10 +25,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.StarBorder
+//import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,8 +37,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.reply.R
-import com.example.reply.data.Email
+import com.suonica.language_app.R
+import com.suonica.language_app.data.Email
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -81,10 +79,10 @@ fun ReplyEmailThreadItem(
                     .clip(CircleShape)
                     .background(MaterialTheme.colorScheme.surface)
             ) {
-                Icon(
-                    imageVector = if (email.isStarred) Icons.Default.Star else Icons.Default.StarBorder,
-                    contentDescription = "Favorite",
-                )
+//                Icon(
+//                    imageVector = if (email.isStarred) Icons.Default.Star else Icons.Default.StarBorder,
+//                    contentDescription = "Favorite",
+//                ) TODO
             }
         }
 

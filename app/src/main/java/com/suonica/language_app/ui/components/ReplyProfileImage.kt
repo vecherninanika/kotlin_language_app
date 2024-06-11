@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui.components
+package com.suonica.language_app.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size

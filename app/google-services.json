@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487183274711",
+    "project_id": "language-app-aa736",
+    "storage_bucket": "language-app-aa736.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487183274711:android:c6e1e7b8cebe01f2ddd692",
+        "android_client_info": {
+          "package_name": "com.suonica.language_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Sbsfs3V4bmhvKty5d7b--8cSWCcOV9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

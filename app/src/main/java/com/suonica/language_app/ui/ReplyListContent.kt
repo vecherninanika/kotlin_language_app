@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui
+package com.suonica.language_app.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Box
@@ -36,12 +36,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.reply.R
-import com.example.reply.data.Email
-import com.example.reply.ui.components.EmailDetailAppBar
-import com.example.reply.ui.components.ReplyEmailListItem
-import com.example.reply.ui.components.ReplyEmailThreadItem
-import com.example.reply.ui.components.ReplySearchBar
+import com.suonica.language_app.R
+import com.suonica.language_app.data.Email
+import com.suonica.language_app.ui.components.EmailDetailAppBar
+import com.suonica.language_app.ui.components.ReplyEmailListItem
+import com.suonica.language_app.ui.components.ReplyEmailThreadItem
+import com.suonica.language_app.ui.components.ReplySearchBar
 
 @Composable
 fun ReplyInboxScreen(
