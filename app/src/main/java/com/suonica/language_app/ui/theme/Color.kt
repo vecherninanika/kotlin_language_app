@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.suonica.compose
+package com.suonica.language_app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
