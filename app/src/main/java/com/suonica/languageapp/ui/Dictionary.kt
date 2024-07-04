@@ -39,9 +39,9 @@ fun WordItem(
     ) {
         Text(
             modifier =
-            Modifier
-                .weight(1f)
-                .padding(start = 16.dp),
+                Modifier
+                    .weight(1f)
+                    .padding(start = 16.dp),
             text = "$original - $translated",
         )
         Checkbox(
@@ -104,7 +104,7 @@ fun WordsScreen(
     onAddWordClicked: () -> Unit,
     userId: String,
     isDarkTheme: Boolean,
-    onThemeToggleClick: () -> Unit
+    onThemeToggleClick: () -> Unit,
 ) {
     Column(modifier = modifier.padding(16.dp)) {
         Button(onClick = onThemeToggleClick) {
@@ -125,7 +125,6 @@ fun WordsListScreen(
     wordsUiState: WordsUiState,
     userId: String,
     modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
     when (wordsUiState) {
         is WordsUiState.Loading -> Text(stringResource(R.string.loading))
@@ -142,9 +141,9 @@ fun WordsListScreen(
 private fun NavigationMenu(onArticlesButtonClicked: () -> Unit) {
     Row(
         modifier =
-        Modifier
-            .fillMaxWidth()
-            .padding(dimensionResource(R.dimen.padding_medium)),
+            Modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(R.dimen.padding_medium)),
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
         verticalAlignment = Alignment.Bottom,
     ) {

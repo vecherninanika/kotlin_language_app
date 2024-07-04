@@ -18,9 +18,8 @@ fun Login(
     onContinueClicked: () -> Unit,
     modifier: Modifier = Modifier,
     isDarkTheme: Boolean,
-    onThemeToggleClick: () -> Unit
+    onThemeToggleClick: () -> Unit,
 ) {
-
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

@@ -1,6 +1,5 @@
 package com.suonica.languageapp.ui
 
-import android.content.res.Configuration
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -31,18 +30,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.suonica.language_app.R
-import com.suonica.languageapp.ui.theme.AppTheme
 
 @Composable
 fun Articles(
     modifier: Modifier = Modifier,
     onDictionaryButtonClicked: () -> Unit = {},
     isDarkTheme: Boolean,
-    onThemeToggleClick: () -> Unit
+    onThemeToggleClick: () -> Unit,
 ) {
     Column(modifier = modifier.padding(vertical = 4.dp)) {
         Button(onClick = onThemeToggleClick) {
@@ -54,9 +51,9 @@ fun Articles(
 
     Row(
         modifier =
-        Modifier
-            .fillMaxWidth()
-            .padding(dimensionResource(R.dimen.padding_medium)),
+            Modifier
+                .fillMaxWidth()
+                .padding(dimensionResource(R.dimen.padding_medium)),
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
         verticalAlignment = Alignment.Bottom,
     ) {
@@ -126,21 +123,21 @@ private fun CardContent(
 
     Row(
         modifier =
-        Modifier
-            .padding(12.dp)
-            .animateContentSize(
-                animationSpec =
-                spring(
-                    dampingRatio = Spring.DampingRatioMediumBouncy,
-                    stiffness = Spring.StiffnessLow,
+            Modifier
+                .padding(12.dp)
+                .animateContentSize(
+                    animationSpec =
+                        spring(
+                            dampingRatio = Spring.DampingRatioMediumBouncy,
+                            stiffness = Spring.StiffnessLow,
+                        ),
                 ),
-            ),
     ) {
         Column(
             modifier =
-            Modifier
-                .weight(1f)
-                .padding(12.dp),
+                Modifier
+                    .weight(1f)
+                    .padding(12.dp),
         ) {
             Text(text = articleTitle)
             if (expanded) {
