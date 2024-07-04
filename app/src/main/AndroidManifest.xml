@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Language_app"
         tools:targetApi="31">
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.suonica.languageapp.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Language_app">

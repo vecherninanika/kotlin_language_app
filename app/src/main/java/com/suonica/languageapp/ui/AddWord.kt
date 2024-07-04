@@ -30,6 +30,8 @@ fun AddWordScreen(
     onBackClicked: () -> Unit,
     onSaveClicked: (word: String, translation: String) -> Unit,
     userId: String,
+    isDarkTheme: Boolean,
+    onThemeToggleClick: () -> Unit
 ) {
     var word by remember { mutableStateOf("") }
     var translation by remember { mutableStateOf("") }
@@ -41,6 +43,9 @@ fun AddWordScreen(
             .fillMaxSize()
             .padding(16.dp),
     ) {
+        Button(onClick = onThemeToggleClick) {
+            Text(if (isDarkTheme) stringResource(R.string.light_theme) else stringResource(R.string.dark_theme))
+        }
         OutlinedTextField(
             value = word,
             onValueChange = { word = it },

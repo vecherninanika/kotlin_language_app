@@ -23,7 +23,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.suonica.languageapp.R
+import com.suonica.language_app.R
 
 @Composable
 fun WordItem(
@@ -39,9 +39,9 @@ fun WordItem(
     ) {
         Text(
             modifier =
-                Modifier
-                    .weight(1f)
-                    .padding(start = 16.dp),
+            Modifier
+                .weight(1f)
+                .padding(start = 16.dp),
             text = "$original - $translated",
         )
         Checkbox(
@@ -103,11 +103,16 @@ fun WordsScreen(
     onArticlesButtonClicked: () -> Unit,
     onAddWordClicked: () -> Unit,
     userId: String,
+    isDarkTheme: Boolean,
+    onThemeToggleClick: () -> Unit
 ) {
     Column(modifier = modifier.padding(16.dp)) {
-        Text("Dictionary")
+        Button(onClick = onThemeToggleClick) {
+            Text(if (isDarkTheme) stringResource(R.string.light_theme) else stringResource(R.string.dark_theme))
+        }
+        Text(stringResource(R.string.dictionary))
         Button(onClick = onAddWordClicked, Modifier.padding(top = 8.dp)) {
-            Text("Add a word")
+            Text(stringResource(R.string.add_a_word))
         }
         val wordsViewModel: WordsViewModel = viewModel()
         WordsListScreen(wordsViewModel.wordsUiState, userId = userId)
@@ -123,13 +128,13 @@ fun WordsListScreen(
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
     when (wordsUiState) {
-        is WordsUiState.Loading -> Text("Loading")
+        is WordsUiState.Loading -> Text(stringResource(R.string.loading))
         is WordsUiState.Success ->
             WordsList(
                 words = wordsUiState.words,
                 userId = userId,
             )
-        is WordsUiState.Error -> Text("Error")
+        is WordsUiState.Error -> Text(stringResource(R.string.error))
     }
 }
 
@@ -137,9 +142,9 @@ fun WordsListScreen(
 private fun NavigationMenu(onArticlesButtonClicked: () -> Unit) {
     Row(
         modifier =
-            Modifier
-                .fillMaxWidth()
-                .padding(dimensionResource(R.dimen.padding_medium)),
+        Modifier
+            .fillMaxWidth()
+            .padding(dimensionResource(R.dimen.padding_medium)),
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
         verticalAlignment = Alignment.Bottom,
     ) {

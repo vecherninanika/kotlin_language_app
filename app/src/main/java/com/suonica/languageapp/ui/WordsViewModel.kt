@@ -20,7 +20,6 @@ sealed interface WordsUiState {
 }
 
 class WordsViewModel : ViewModel() {
-    /** The mutable State that stores the status of the most recent request */
     var wordsUiState: WordsUiState by mutableStateOf(WordsUiState.Loading)
         private set
 

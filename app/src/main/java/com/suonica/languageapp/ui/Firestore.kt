@@ -17,7 +17,7 @@ suspend fun getWordsForUser(userId: String): List<DBWord> {
                 .await()
         } catch (e: FirebaseFirestoreException) {
             // Handle exception
-            throw RuntimeException("Ошибка при получении данных из Firebase", e)
+            throw RuntimeException("Error getting words for user $userId: ", e)
         }
     return snapshot.map { it.toObject(DBWord::class.java).also { word -> word.id = it.id } }
 }
@@ -30,10 +30,10 @@ fun updateWord(
         .document(word.id)
         .update(hashMapOf("learnt" to word.learnt) as Map<String, Any>)
         .addOnSuccessListener { documentReference ->
-            Log.d("firestore", "слово изменено")
+            Log.d("firestore", "Word '${word.original}' updated successfully")
         }
         .addOnFailureListener { exception ->
-            Log.d("firestore", "Ошибка при изменении слова: $exception")
+            Log.d("firestore", "Error updating word '${word.original}': $exception")
         }
 }
 
@@ -46,10 +46,10 @@ fun addUser(username: String) {
     db.collection("users")
         .add(user)
         .addOnSuccessListener { documentReference ->
-            println("Новый пользователь успешно добавлен с ID: ${documentReference.id}")
+            println("New user added sucessfully with ID: ${documentReference.id}")
         }
         .addOnFailureListener { exception ->
-            println("Ошибка при добавлении нового пользователя: $exception")
+            println("Error adding new user: $exception")
         }
 }
 
@@ -69,12 +69,12 @@ fun addWord(
     db.collection("users").document(userId).collection("words")
         .add(word)
         .addOnSuccessListener { documentReference ->
-            Log.d("firestore", "Новое слово успешно добавлен с ID: ${documentReference.id}")
-            callback("Новое слово успешно добавлен с ID: ${documentReference.id}")
+            Log.d("firestore", "New word added successfully: ${documentReference.id}")
+            callback("New word added successfully with ID: ${documentReference.id}")
         }
         .addOnFailureListener { exception ->
-            Log.d("firestore", "Ошибка при добавлении нового слова: $exception")
-            callback("Ошибка при добавлении нового слова: $exception")
+            Log.d("firestore", "Error adding new word: $exception")
+            callback("Error adding new word: $exception")
         }
 }
 
@@ -92,7 +92,7 @@ fun getUser(
             }
         }
         .addOnFailureListener { exception ->
-            println("Ошибка при получении пользователя: $exception")
+            println("Error getting user $username: $exception")
         }
 }
 
@@ -103,7 +103,7 @@ suspend fun getArticles(): List<DBArticle> {
                 .get()
                 .await()
         } catch (e: FirebaseFirestoreException) {
-            throw RuntimeException("Ошибка при получении данных из Firebase", e)
+            throw RuntimeException("Error getting articles from Firebase: ", e)
         }
     return snapshot.map { it.toObject(DBArticle::class.java) }
 }

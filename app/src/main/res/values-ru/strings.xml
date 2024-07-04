@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="profile">профиль</string>
-    <string name="search">искать</string>
-    <string name="dictionary">словарь</string>
-    <string name="articles">статьи</string>
-    <string name="save">сохранить</string>
+    <string name="profile">Профиль</string>
+    <string name="search">Искать</string>
+    <string name="dictionary">Словарь</string>
+    <string name="articles">Статьи</string>
+    <string name="save">Сохранить</string>
     <string name="app_name">Приложение для изучения языков</string>
-    <string name="back">Back</string>
-    <string name="translation">Translation</string>
+    <string name="back">Назад</string>
+    <string name="translation">Перевод</string>
+    <string name="word">Слово</string>
+    <string name="loading">Загрузка</string>
+    <string name="error">Ошибка</string>
+    <string name="add_a_word">Добавить слово</string>
+    <string name="welcome">Добро пожаловать в приложение для изучения языков SUON!</string>
+    <string name="login">Войти через Google</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Темная тема</string>
 </resources>

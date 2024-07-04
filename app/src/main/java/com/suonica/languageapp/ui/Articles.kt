@@ -35,24 +35,28 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.suonica.language_app.R
-import com.suonica.languageapp.R
 import com.suonica.languageapp.ui.theme.AppTheme
 
 @Composable
 fun Articles(
     modifier: Modifier = Modifier,
     onDictionaryButtonClicked: () -> Unit = {},
+    isDarkTheme: Boolean,
+    onThemeToggleClick: () -> Unit
 ) {
     Column(modifier = modifier.padding(vertical = 4.dp)) {
+        Button(onClick = onThemeToggleClick) {
+            Text(if (isDarkTheme) stringResource(R.string.light_theme) else stringResource(R.string.dark_theme))
+        }
         val articlesViewModel: ArticlesViewModel = viewModel()
         ArticlesListScreen(articlesUiState = articlesViewModel.articlesUiState)
     }
 
     Row(
         modifier =
-            Modifier
-                .fillMaxWidth()
-                .padding(dimensionResource(R.dimen.padding_medium)),
+        Modifier
+            .fillMaxWidth()
+            .padding(dimensionResource(R.dimen.padding_medium)),
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
         verticalAlignment = Alignment.Bottom,
     ) {
@@ -90,9 +94,9 @@ fun ArticlesListScreen(
     modifier: Modifier = Modifier,
 ) {
     when (articlesUiState) {
-        is ArticlesUiState.Loading -> Text("Loading")
+        is ArticlesUiState.Loading -> Text(stringResource(R.string.loading))
         is ArticlesUiState.Success -> ArticlesList(articles = articlesUiState.articles)
-        is ArticlesUiState.Error -> Text("Error")
+        is ArticlesUiState.Error -> Text(stringResource(R.string.error))
     }
 }
 
@@ -122,21 +126,21 @@ private fun CardContent(
 
     Row(
         modifier =
-            Modifier
-                .padding(12.dp)
-                .animateContentSize(
-                    animationSpec =
-                        spring(
-                            dampingRatio = Spring.DampingRatioMediumBouncy,
-                            stiffness = Spring.StiffnessLow,
-                        ),
+        Modifier
+            .padding(12.dp)
+            .animateContentSize(
+                animationSpec =
+                spring(
+                    dampingRatio = Spring.DampingRatioMediumBouncy,
+                    stiffness = Spring.StiffnessLow,
                 ),
+            ),
     ) {
         Column(
             modifier =
-                Modifier
-                    .weight(1f)
-                    .padding(12.dp),
+            Modifier
+                .weight(1f)
+                .padding(12.dp),
         ) {
             Text(text = articleTitle)
             if (expanded) {
@@ -156,19 +160,5 @@ private fun CardContent(
                     },
             )
         }
-    }
-}
-
-@Preview(
-    showBackground = true,
-    widthDp = 320,
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    name = "ArticlePreviewDark",
-)
-@Preview(showBackground = true, widthDp = 320)
-@Composable
-fun ArticlePreview() {
-    AppTheme {
-        Articles()
     }
 }
