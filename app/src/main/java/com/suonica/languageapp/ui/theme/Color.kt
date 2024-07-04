@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.suonica.language_app.ui.theme
+package com.suonica.languageapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -79,6 +79,5 @@ val md_theme_dark_shadow = Color(0xFF000000)
 val md_theme_dark_surfaceTint = Color(0xFFFFB951)
 val md_theme_dark_outlineVariant = Color(0xFF4F4539)
 val md_theme_dark_scrim = Color(0xFF000000)
-
 
 val seed = Color(0xFF825500)

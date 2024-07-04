@@ -9,33 +9,37 @@
   the License.
   -->
 <resources>
-    <string name="app_name">Reply</string>
-    <string name="navigation_drawer">Navigation Drawer</string>
-    <string name="tab_inbox">Inbox</string>
-    <string name="tab_article">Articles</string>
-    <string name="tab_dm">Direct Messages</string>
-    <string name="tab_groups">Groups</string>
+    <string name="app_name">Language app</string>
+    <string name="navigation_drawer" translatable="false">Navigation Drawer</string>
+    <string name="tab_inbox" translatable="false">Inbox</string>
+    <string name="tab_article" translatable="false">Articles</string>
+    <string name="tab_dm" translatable="false">Direct Messages</string>
+    <string name="tab_groups" translatable="false">Groups</string>
 
     <string name="profile">Profile</string>
     <string name="search">Search</string>
-    <string name="search_replies">Search replies</string>
-    <string name="reply">Reply</string>
-    <string name="reply_all">Reply All</string>
+    <string name="search_replies" translatable="false">Search replies</string>
+    <string name="reply" translatable="false">Reply</string>
+    <string name="reply_all" translatable="false">Reply All</string>
 
-    <string name="edit">Edit</string>
-    <string name="compose">Compose</string>
+    <string name="edit" translatable="false">Edit</string>
+    <string name="compose" translatable="false">Compose</string>
 
-    <string name="empty_screen_title">Screen under construction</string>
-    <string name="empty_screen_subtitle">This screen is still under construction</string>
+    <string name="empty_screen_title" translatable="false">Screen under construction</string>
+    <string name="empty_screen_subtitle" translatable="false">This screen is still under construction</string>
 
-    <string name="back_button">Back</string>
-    <string name="more_options_button">More options</string>
-    <string name="messages">Messages</string>
-    <string name="four_hours_ago">4 hrs ago</string>
-    <string name="twenty_mins_ago">20 mins ago</string>
-    <string name="description_favorite">Favorite</string>
-    <string name="show_less">Show less</string>
-    <string name="show_more">Show more</string>
+    <string name="back_button" translatable="false">Back</string>
+    <string name="more_options_button" translatable="false">More options</string>
+    <string name="messages" translatable="false">Messages</string>
+    <string name="four_hours_ago" translatable="false">4 hrs ago</string>
+    <string name="twenty_mins_ago" translatable="false">20 mins ago</string>
+    <string name="description_favorite" translatable="false">Favorite</string>
+    <string name="show_less" translatable="false">Show less</string>
+    <string name="show_more" translatable="false">Show more</string>
     <string name="dictionary">Dictionary</string>
     <string name="articles">Articles</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="translation">Translation</string>
+    <string name="word">Word</string>
 </resources>

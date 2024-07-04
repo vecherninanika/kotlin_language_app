@@ -1,4 +1,4 @@
-package com.suonica.language_app.ui
+package com.suonica.languageapp.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,17 +14,17 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun Login(
     onContinueClicked: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text("Welcome to SUON language app!")
         Button(
             modifier = Modifier.padding(vertical = 24.dp),
-            onClick = onContinueClicked
+            onClick = onContinueClicked,
         ) {
             Text("Login through Google")
         }

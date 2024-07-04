@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile">профиль</string>
+    <string name="search">искать</string>
+    <string name="dictionary">словарь</string>
+    <string name="articles">статьи</string>
+    <string name="save">сохранить</string>
+    <string name="app_name">Приложение для изучения языков</string>
+    <string name="back">Back</string>
+    <string name="translation">Translation</string>
+</resources>
